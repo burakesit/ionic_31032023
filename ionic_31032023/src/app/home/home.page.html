@@ -1,0 +1,76 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <form #form="ngForm">
+
+  
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Login Panel</ion-card-title>
+      <ion-card-subtitle><ion-list>
+        <ion-item>
+          <ion-input label="Input"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-input 
+          label="Email Input" 
+          placeholder="Enter your email" 
+          required="required" 
+          [clearInput]="true" 
+          name="login_email"
+          [ngModel]="login_email">
+        </ion-input>
+          <ion-input 
+          label="Password" 
+          placeholder="Enter your password" 
+          required="required" 
+          [clearInput]="true" 
+          name="login_email"
+          [ngModel]="login_password">
+        </ion-input>
+      </ion-item>
+         </ion-list>
+        <ion-button shape="round"
+        expand="block"
+        type="submit"        
+        [disabled]="!form.valid"
+        routerLink="/home2"
+        (click)="loginform(form)">Submit          
+        </ion-button>
+        <ion-button shape="round"
+        expand="block"
+        type="submit"        
+        [disabled]=""
+        (click)="loginform(form)">CONTINUE AS GUEST          
+        </ion-button>
+       
+      
+        
+      
+       
+     </ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      
+    </ion-card-content>
+  </ion-card>
+
+  <div id="container">
+    <strong>Ready to create an app?</strong>
+    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  </div>
+</form>
+</ion-content>
